@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Kanban/>    
+    <Kanban :data="data"/>    
   </div>
 </template>
 
@@ -11,6 +11,27 @@ export default {
   name: 'App',
   components: {
     Kanban
+  },
+  data(){
+    return{
+      data:[
+        {
+          name:"todo",
+          color: "#BB8FCE",
+          tasks:[]
+        },
+        {
+          name:"doing",
+          color: "#85C1E9",
+          tasks:[]
+        },
+        {
+          name:"done",
+          color: "#82E0AA",
+          tasks:[]
+        }
+      ]
+    }
   }
 }
 </script>
